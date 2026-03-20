@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HMF Chemical Enterprises</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="app-logo.svg" alt="HMF Chemical Enterprises logo" class="brand-logo">
+        <div>
+          <p class="eyebrow">Chemical Business Suite</p>
+          <h1>HMF Chemical Enterprises</h1>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-link active" data-target="dashboard">Dashboard</button>
+        <button class="nav-link" data-target="billing">Billing</button>
+        <button class="nav-link" data-target="inventory">Inventory</button>
+        <button class="nav-link" data-target="customers">Customers</button>
+        <button class="nav-link" data-target="reports">Reports</button>
+      </nav>
+
+      <div class="sidebar-card">
+        <p class="eyebrow">Quick Status</p>
+        <h2>Business ready</h2>
+        <p>Track stock, sales, and invoices in one place with this starter project.</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Wholesale + Retail Operations</p>
+          <h2>Manage billing, inventory, and customer records without switching tools.</h2>
+          <p class="hero-copy">This starter includes sample data, a billing flow, low-stock alerts, customer records, and sales summaries designed for chemical shops.</p>
+        </div>
+
+        <div class="hero-actions">
+          <button class="primary-btn" id="seed-demo">Reset Demo Data</button>
+          <button class="secondary-btn" id="export-data">Export JSON</button>
+        </div>
+      </header>
+
+      <section id="dashboard" class="panel active">
+        <div class="stats-grid" id="stats-grid"></div>
+
+        <div class="content-grid">
+          <article class="card">
+            <div class="card-head">
+              <div>
+                <p class="eyebrow">Alerts</p>
+                <h3>Low stock products</h3>
+              </div>
+            </div>
+            <div id="low-stock-list" class="stack-list"></div>
+          </article>
+
+          <article class="card">
+            <div class="card-head">
+              <div>
+                <p class="eyebrow">Recent Billing</p>
+                <h3>Latest invoices</h3>
+              </div>
+            </div>
+            <div id="invoice-list" class="stack-list"></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="billing" class="panel">
+        <div class="content-grid billing-grid">
+          <article class="card">
+            <div class="card-head">
+              <div>
+                <p class="eyebrow">Create Invoice</p>
+                <h3>Fast billing</h3>
+              </div>
+            </div>
+
+            <form id="invoice-form" class="form-grid">
+              <label>
+                Customer name
+                <input type="text" name="customerName" placeholder="Enter customer name" required>
+              </label>
+              <label>
+                Product
+                <select name="productName" id="product-select" required></select>
+              </label>
+              <label>
+                Quantity
+                <input type="number" name="quantity" min="1" value="1" required>
+              </label>
+              <label>
+                Payment method
+                <select name="paymentMethod" required>
+                  <option value="Cash">Cash</option>
+                  <option value="UPI">UPI</option>
+                  <option value="QR Code">QR Code</option>
+                </select>
+              </label>
+              <button class="primary-btn" type="submit">Generate Invoice</button>
+            </form>
+
+            <div class="notice">
+              Demo behavior: creating an invoice updates sales totals, customer history, and stock count using local browser storage.
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-head">
+              <div>
+                <p class="eyebrow">Invoice Preview</p>
+                <h3>Latest generated bill</h3>
+              </div>
+            </div>
+            <div id="latest-invoice" class="invoice-preview empty-state">No invoice created yet.</div>
+          </article>
+        </div>
+      </section>
+
+      <section id="inventory" class="panel">
+        <article class="card">
+          <div class="card-head">
+            <div>
+              <p class="eyebrow">Stock Control</p>
+              <h3>Inventory list</h3>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Category</th>
+                  <th>Price</th>
+                  <th>Stock</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="inventory-table"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section id="customers" class="panel">
+        <article class="card">
+          <div class="card-head">
+            <div>
+              <p class="eyebrow">Customer Database</p>
+              <h3>Purchase history</h3>
+            </div>
+          </div>
+          <div id="customer-grid" class="customer-grid"></div>
+        </article>
+      </section>
+
+      <section id="reports" class="panel">
+        <div class="stats-grid" id="report-stats"></div>
+
+        <div class="content-grid">
+          <article class="card">
+            <div class="card-head">
+              <div>
+                <p class="eyebrow">Payment Mix</p>
+                <h3>Collection summary</h3>
+              </div>
+            </div>
+            <div id="payment-summary" class="stack-list"></div>
+          </article>
+
+          <article class="card">
+            <div class="card-head">
+              <div>
+                <p class="eyebrow">Popular Products</p>
+                <h3>Sales movement</h3>
+              </div>
+            </div>
+            <div id="product-summary" class="stack-list"></div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

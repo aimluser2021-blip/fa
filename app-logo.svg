@@ -1,0 +1,72 @@
+<svg width="900" height="700" viewBox="0 0 900 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueMain" x1="148" y1="247" x2="732" y2="389" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D73D0"/>
+      <stop offset="0.48" stop-color="#1A8BE6"/>
+      <stop offset="1" stop-color="#0A3F9B"/>
+    </linearGradient>
+    <linearGradient id="blueLight" x1="226" y1="184" x2="618" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#59D5FF"/>
+      <stop offset="1" stop-color="#C8F0FF"/>
+    </linearGradient>
+    <linearGradient id="greenRibbon" x1="209" y1="468" x2="732" y2="540" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E7B15"/>
+      <stop offset="0.55" stop-color="#2DB400"/>
+      <stop offset="1" stop-color="#08701E"/>
+    </linearGradient>
+    <linearGradient id="bubble" x1="92" y1="485" x2="179" y2="573" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E7FBFF"/>
+      <stop offset="0.5" stop-color="#66D9FF"/>
+      <stop offset="1" stop-color="#1792D7"/>
+    </linearGradient>
+    <filter id="shadow" x="98" y="121" width="651" height="470" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feOffset dy="10"/>
+      <feGaussianBlur stdDeviation="10"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.027451 0 0 0 0 0.176471 0 0 0 0 0.439216 0 0 0 0.24 0"/>
+      <feBlend in2="SourceGraphic" result="shape"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="700" fill="#F8FBFF"/>
+
+  <path d="M142 408C190 279 354 183 603 181C669 181 721 190 769 206C694 169 598 146 491 146C314 146 167 224 106 347C90 379 83 414 85 444C99 432 117 420 142 408Z" fill="#1FAEF2"/>
+  <path d="M111 430C164 267 342 165 593 165C654 165 717 173 774 192C714 150 618 126 505 126C307 126 149 214 90 354C76 387 70 420 72 451C83 443 96 436 111 430Z" fill="#0B6FD1"/>
+  <path d="M176 470C248 533 389 570 530 562C670 554 759 502 808 407C754 482 642 522 524 523C378 523 249 463 176 470Z" fill="#0D7F1B"/>
+  <path d="M205 492C307 538 453 549 592 525C687 509 761 466 803 411C766 509 662 571 500 579C367 585 253 552 205 492Z" fill="#2FB200"/>
+
+  <g filter="url(#shadow)">
+    <path d="M160 257L693 211L671 418L207 425L160 257Z" fill="url(#blueMain)" stroke="#0C4A9D" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M195 264C291 223 420 200 563 204C612 206 648 211 677 219L662 272C620 260 583 255 527 253C391 246 277 267 202 303L195 264Z" fill="url(#blueLight)" opacity="0.92"/>
+
+    <g fill="#FDFEFE" stroke="#A9D8FF" stroke-width="10" stroke-linejoin="round">
+      <path d="M188 288H260L250 340H332L342 288H414L379 397H307L319 346H238L226 397H154L188 288Z"/>
+      <path d="M357 288H427L450 351L527 288H604L569 397H499L516 328L447 383H434L399 328L382 397H322L357 288Z"/>
+      <path d="M555 288H697L687 344H615L611 362H676L666 411H524L555 288Z"/>
+    </g>
+  </g>
+
+  <path d="M214 421H742L700 510H201L214 421Z" fill="url(#greenRibbon)"/>
+  <path d="M210 420C236 400 287 390 349 389H759L742 420H210Z" fill="#149123"/>
+  <path d="M216 501C335 527 518 525 669 497C605 530 500 547 395 544C319 542 255 526 216 501Z" fill="#D8FFB8" opacity="0.35"/>
+  <path d="M210 420H742L700 510H201" stroke="#FFFFFF" stroke-width="9" stroke-linejoin="round"/>
+
+  <g transform="translate(251 432) skewX(-10)">
+    <text x="0" y="55" fill="#FFFFFF" font-size="44" font-family="Arial, Helvetica, sans-serif" font-style="italic" font-weight="700">Chemical Enterprises</text>
+  </g>
+
+  <g>
+    <circle cx="122" cy="505" r="33" fill="url(#bubble)" stroke="#177CC5" stroke-width="5"/>
+    <circle cx="166" cy="493" r="23" fill="url(#bubble)" stroke="#177CC5" stroke-width="5"/>
+    <circle cx="127" cy="457" r="15" fill="url(#bubble)" stroke="#177CC5" stroke-width="4"/>
+    <circle cx="165" cy="445" r="10" fill="url(#bubble)" stroke="#177CC5" stroke-width="4"/>
+    <circle cx="112" cy="493" r="8" fill="#FFFFFF" opacity="0.85"/>
+    <circle cx="156" cy="484" r="6" fill="#FFFFFF" opacity="0.85"/>
+    <circle cx="123" cy="451" r="4" fill="#FFFFFF" opacity="0.85"/>
+  </g>
+
+  <g fill="#FFFFFF">
+    <path d="M231 194L238 214L258 221L238 228L231 248L224 228L204 221L224 214L231 194Z"/>
+    <path d="M605 201L614 228L641 237L614 246L605 273L596 246L569 237L596 228L605 201Z"/>
+    <path d="M157 223L162 237L176 242L162 247L157 261L152 247L138 242L152 237L157 223Z"/>
+  </g>
+</svg>
